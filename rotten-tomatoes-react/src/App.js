@@ -13,11 +13,11 @@ class App extends Component {
       .then(users => this.setState({users}));
   }
 
-  componentDidMount(){
-    fetch('/movies')
-      .then(res => res.json())
-      .then(movies => this.setState({movies}))
-  }
+  // componentDidMount(){
+  //   fetch('/movies')
+  //     .then(res => res.json())
+  //     .then(movies => this.setState({movies}))
+  // }
 
   render() {
     return (
