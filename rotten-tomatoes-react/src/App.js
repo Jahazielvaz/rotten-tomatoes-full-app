@@ -4,20 +4,15 @@ import './App.css';
 
 class App extends Component {
   state = {
-          users: [],
-          movies: []
-          }
+          users: []
+
   componentDidMount(){
     fetch('/users')
       .then(res => res.json())
       .then(users => this.setState({users}));
   }
 
-  // componentDidMount(){
-  //   fetch('/movies')
-  //     .then(res => res.json())
-  //     .then(movies => this.setState({movies}))
-  // }
+
 
   render() {
     return (
@@ -27,9 +22,7 @@ class App extends Component {
           <div key = {user.id}>{user.username}</div>
         )}
 
-        {this.state.movies.map(movie =>
-          <div key = {movie.id}>{movie.title}</div>
-        )}
+
       </div>
     );
   }
